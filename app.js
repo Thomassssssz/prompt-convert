@@ -19,3 +19,21 @@ function convertCurrency() {
         salida: usd.toFixed(2)
     });
 }
+function menu() {
+    let opcion;
+    
+    do {
+        opcion = prompt(
+        `Elija una opcion:
+            1. Divisa (ARS -> USD)
+            2. Salir`
+        );
+        switch (opcion) {
+            case "1": convertCurrency(); break;
+            case "2": 
+                console.log("Historial completo:", history); 
+                break;
+            default: alert("Opción no válida");
+        }
+    }while(opcion !== "2");
+}menu();
